@@ -41,6 +41,11 @@ Options:
                         discardEmpty        minifyParams        zindex
                         discardUnused       minifySelectors
 
+    --safe              Disable advanced optimisations that are not always safe.
+                        Currently, this disables custom identifier reduction,
+                        z-index rebasing, unused at-rule removal & conversion
+                        between absolute length values.
+
 
     --version,    -v    Outputs the version number.
 
