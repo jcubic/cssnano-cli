@@ -1,3 +1,7 @@
+# 1.0.3
+
+* Adds missing documentation for the `safe` option.
+
 # 1.0.2
 
 * Fixes an issue where passing the sourcemap option as anything but the last
