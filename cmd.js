@@ -44,5 +44,8 @@ read(file, function (err, buf) {
     }
     nano.process(String(buf), opts).then(function (result) {
         write(out, result.css);
+        if (opts.map && opts.to) {
+            fs.writeFile(opts.to + '.map', result.map.toString());
+        }
     });
 });
