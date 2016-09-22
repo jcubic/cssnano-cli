@@ -49,7 +49,8 @@ read(file, function (err, buf) {
         }
     }).catch(function (err) {
         if (err.message && typeof err.showSourceCode === 'function') {
-          console.error(err.message, err.showSourceCode());
+          console.error(err.message);
+          console.error(err.showSourceCode());
         } else {
           console.error(err);
         }

@@ -77,6 +77,6 @@ test('cli: should show css syntax error', function (t) {
 
     setup(['fixtures/error.css'], function (err) {
         t.ok(err);
-        t.ok(~err.indexOf('Unknown word'));
+        t.ok(~err.indexOf('Unclosed bracket'));
     });
 });
