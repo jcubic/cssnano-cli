@@ -47,5 +47,12 @@ read(file, function (err, buf) {
         if (opts.map && opts.to) {
             fs.writeFile(opts.to + '.map', result.map.toString());
         }
+    }).catch(function (err) {
+        if (err.message && typeof err.showSourceCode === 'function') {
+          console.error(err.message, err.showSourceCode());
+        } else {
+          console.error(err);
+        }
+        process.exit(1);
     });
 });

@@ -71,3 +71,12 @@ test('cli: usage with sourcemaps and source file contains sourcemaps', function 
         t.ok(hasMap, 'should generate a sourcemap');
     });
 });
+
+test('cli: should show css syntax error', function (t) {
+    t.plan(2);
+
+    setup(['fixtures/error.css'], function (err) {
+        t.ok(err);
+        t.ok(~err.indexOf('Unknown word'));
+    });
+});
