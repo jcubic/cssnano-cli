@@ -1,3 +1,7 @@
+# 1.0.5
+
+* Now prints any errors from PostCSS to stderr.
+
 # 1.0.4
 
 * Resolves an issue where external source maps were not being properly handled
